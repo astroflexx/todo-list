@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+h1 {
+    text-align: center;
+}
+
+.todo-list {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.project {
+    height: 5rem;
+    width: 90%;
+    margin: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    border: 1px solid black;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.create-new-project {
+    height: 50px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
