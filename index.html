@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="todo.bundle.js"></script></head>
+
 <body>
-    
+    <h1>Todo List</h1>
+    <div class="todo-list">
+        <div class="projects">
+            <div class="list">
+            </div>
+
+            <div class="btn">
+                <button class="create-new-project">Create new project</button>
+            </div>
+        </div>
+        <div class="todos" id="0">
+            <div class="todo">
+                <p class="title">brush your teeth before bed</p>
+                <p class="description">some description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                    sit nemo sed pariatur. Nulla reiciendis atque explicabo vitae aspernatur non! Nesciunt quas et
+                    minima repellendus officiis deleniti dolor hic facere!</p>
+
+                <div class="buttons">
+                    <p class="due-date">Due date: 15/3/24</p>
+                    <p class="days-left">7 days left</p>
+                    <button>Mark Complete</button>
+                    <div class="priority">
+                        <select name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="todo">
+                <p class="title">brush your teeth before bed</p>
+                <p class="description">some description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                    sit nemo sed pariatur. Nulla reiciendis atque explicabo vitae aspernatur non! Nesciunt quas et
+                    minima repellendus officiis deleniti dolor hic facere!</p>
+
+                <div class="buttons">
+                    <p class="due-date">Due date: 15/3/24</p>
+                    <p class="days-left">7 days left</p>
+                    <button>Mark Complete</button>
+                    <div class="priority">
+                        <select name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <button class="delete-btn">Delete Todo</button>
+                    <button class="minmax maximized">Minimize</button>
+                </div>
+            </div>
+
+            <div class="todobtndiv">
+                <button class="create-new-todo">Create new todo</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
