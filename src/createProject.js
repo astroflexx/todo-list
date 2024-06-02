@@ -1,3 +1,5 @@
+import viewTodos from "./viewTodos";
+
 function createProject() {
     const projects = document.querySelector('.projects');
     const list = document.querySelector('.list');
@@ -22,7 +24,7 @@ function createProject() {
 
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            const data = localStorage.getItem('data');
+            const data = JSON.parse(localStorage.getItem('data'));
 
             const projectName = e.target.value;
             const project = {
@@ -30,15 +32,17 @@ function createProject() {
                 todos: [],
             };
 
-            const obj = JSON.parse(data);
-            obj.push(project);
-
-            const json = JSON.stringify(obj);
-            localStorage.setItem('data', json);
-
             const newProject = document.createElement('div');
             newProject.classList.add('project');
             newProject.textContent = projectName;
+            newProject.id = data.length;
+
+            data.push(project);
+            localStorage.setItem('data', JSON.stringify(data));
+
+            newProject.addEventListener('click', (e) => {
+                viewTodos(e);
+            });
 
             projects.removeChild(div);
             projects.appendChild(btn);
